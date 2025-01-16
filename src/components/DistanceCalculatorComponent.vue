@@ -16,7 +16,7 @@
         </p>
       </div>
       <div class="col">
-        <div class="card p-3">
+        <div class="p-3 box">
           <h2 class="mb-3">Form</h2>
           <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
           <form @submit="calculateDistance">
@@ -164,7 +164,7 @@ export default {
       const point1lng = parseFloat(this.point1lng);
       const point2lat = parseFloat(this.point2lat);
       const point2lng = parseFloat(this.point2lng);
-      if (!point1lat || !point1lng || !point2lat || !point2lng) {
+      if (!this.point1lat || !this.point1lng || !this.point2lat || !this.point2lng) {
         this.errorMessage = "All fields are required";
         return;
       }
@@ -237,5 +237,10 @@ export default {
 }
 .form-text {
   font-size: 11px;
+}
+
+.box {
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 </style>
