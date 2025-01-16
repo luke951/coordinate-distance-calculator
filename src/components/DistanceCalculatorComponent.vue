@@ -183,7 +183,7 @@ export default {
         point2lng > 180
       ) {
         this.errorMessage =
-          "Invalid input: Latitude must be between -90 and 90, longitude between -180 and 180.";
+          "Invalid input: Latitude must be a number between -90 and 90, longitude between -180 and 180.";
         return;
       }
       this.errorMessage = null;
